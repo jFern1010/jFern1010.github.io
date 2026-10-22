@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Jonnel Fernandez — Software developer</title>
+  <meta name="description" content="Jonnel Fernandez, software developer in Oslo, Norway. I build my own products: Java & Spring Boot backends, React Native mobile apps, and I explore what AI pair-programming makes possible." />
+  <meta property="og:title" content="Jonnel Fernandez — Software developer" />
+  <meta property="og:description" content="Java & Spring Boot backends, React Native mobile apps, and products built with AI pair-programming." />
+  <meta property="og:image" content="https://jfern1010.github.io/assets/map.jpg" />
+  <meta property="og:type" content="website" />
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <main class="page">
+
+    <header class="intro">
+      <p class="eyebrow">Oslo, Norway</p>
+      <h1>Jonnel Fernandez</h1>
+      <p class="lead">
+        Software developer building my own products — backends in Java &amp; Spring Boot,
+        mobile apps in React Native — and exploring how far AI pair-programming can take
+        a developer working on their own.
+      </p>
+      <nav class="links" aria-label="Contact and profiles">
+        <a href="https://github.com/jFern1010">GitHub</a>
+        <a href="https://www.linkedin.com/in/jonnel-fernandez-7183732ba">LinkedIn</a>
+        <a href="mailto:fernandezjonnel@yahoo.com">Email</a>
+      </nav>
+    </header>
+
+    <section aria-labelledby="projects-title">
+      <h2 id="projects-title">Projects</h2>
+
+      <article class="project featured">
+        <div class="project-head">
+          <img class="app-icon" src="assets/traveliary-icon.png" width="56" height="56" alt="" />
+          <div>
+            <h3>Traveliary</h3>
+            <p class="meta">Mobile app · iOS &amp; Android · <span class="status">Private beta</span></p>
+          </div>
+        </div>
+        <p>
+          A travel diary in photos. You take a photo where you are, it lands on a map, and the next
+          traveler can see who has been there before them. Includes "Must see": the best-known places
+          within 50 km, anywhere in the world.
+        </p>
+        <div class="shots" role="list">
+          <img role="listitem" src="assets/map.jpg" width="400" height="865" loading="lazy" alt="Map with traveler places and must-see sights" />
+          <img role="listitem" src="assets/must-see.jpg" width="400" height="865" loading="lazy" alt="Must see: best-known places nearby, ranked" />
+          <img role="listitem" src="assets/sight.jpg" width="400" height="865" loading="lazy" alt="Sight details with directions and Wikipedia summary" />
+          <img role="listitem" src="assets/editor.jpg" width="400" height="865" loading="lazy" alt="Photo editor with live filters" />
+        </div>
+        <ul class="points">
+          <li>In-app camera and photo editor (crop, filters, adjustments) rendered on the GPU with Skia</li>
+          <li>Offline-first posting with a local upload queue; push notifications</li>
+          <li>Privacy by design: exact locations are never shown, and there's no sign-up</li>
+          <li>Postgres row-level security, PostGIS spatial queries, Edge Functions; 90+ unit tests</li>
+          <li>Built with AI pair-programming (Claude Code), from idea to beta</li>
+        </ul>
+        <ul class="tags" aria-label="Technologies">
+          <li>React Native</li><li>Expo</li><li>TypeScript</li><li>Supabase</li><li>PostGIS</li><li>Skia</li>
+        </ul>
+        <p class="actions">
+          <a href="https://github.com/jFern1010/Traveliary">View code</a>
+          <a href="mailto:fernandezjonnel@yahoo.com?subject=Traveliary%20beta">Join the beta</a>
+        </p>
+      </article>
+
+      <article class="project">
+        <h3>ShopVerse</h3>
+        <p class="meta">E-commerce REST API · <span class="status">Frontend in progress</span></p>
+        <p>
+          The backend of an online shop: product catalog with categories, cart and orders, and a
+          simulated payment flow. Users and admins get different permissions, and the whole API is
+          documented and testable in Swagger UI.
+        </p>
+        <ul class="tags" aria-label="Technologies">
+          <li>Java 21</li><li>Spring Boot</li><li>Spring Security</li><li>JWT</li><li>JPA / Hibernate</li><li>MySQL</li><li>Docker</li>
+        </ul>
+        <p class="actions"><a href="https://github.com/jFern1010/Shopverse">View code</a></p>
+      </article>
+
+      <article class="project">
+        <h3>JobHub API</h3>
+        <p class="meta">Job portal REST API</p>
+        <p>
+          A secure API for job listings with two roles: employers post and manage jobs and see their
+          applicants; jobseekers browse, apply and track their applications. Passwords are hashed
+          with BCrypt and access is controlled with JWT.
+        </p>
+        <ul class="tags" aria-label="Technologies">
+          <li>Java 21</li><li>Spring Boot</li><li>Spring Security</li><li>JWT</li><li>Spring Data JPA</li><li>MySQL</li><li>Swagger</li><li>Docker</li>
+        </ul>
+        <p class="actions"><a href="https://github.com/jFern1010/JobHubAPI">View code</a></p>
+      </article>
+    </section>
+
+    <section aria-labelledby="skills-title">
+      <h2 id="skills-title">Skills</h2>
+      <dl class="skills">
+        <div><dt>Backend</dt><dd>Java, Spring Boot, Spring Security, JPA / Hibernate, REST APIs, Node.js</dd></div>
+        <div><dt>Mobile &amp; web</dt><dd>React Native, Expo, TypeScript, JavaScript, React</dd></div>
+        <div><dt>Data &amp; cloud</dt><dd>PostgreSQL, PostGIS, MySQL, Supabase, Docker</dd></div>
+        <div><dt>Ways of working</dt><dd>Git, testing, AI pair-programming (Claude Code)</dd></div>
+      </dl>
+    </section>
+
+    <section aria-labelledby="contact-title" class="contact">
+      <h2 id="contact-title">Contact</h2>
+      <p>
+        Want to try Traveliary, talk about a project, or just say hi?
+        <a href="mailto:fernandezjonnel@yahoo.com">fernandezjonnel@yahoo.com</a>
+      </p>
+    </section>
+
+    <footer class="footer">
+      <p>© 2026 Jonnel Fernandez</p>
+    </footer>
+  </main>
+</body>
+</html>

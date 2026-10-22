@@ -1,0 +1,199 @@
+/* Clean, minimal, one column. Light by default, dark when the system prefers it. */
+
+:root {
+  --bg: #ffffff;
+  --text: #16181d;
+  --muted: #5f6672;
+  --line: #e7e9ee;
+  --surface: #f6f7f9;
+  --accent: #1a73d9;
+  --accent-soft: #e8f1fc;
+  --radius: 14px;
+  color-scheme: light;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0f1115;
+    --text: #eceef2;
+    --muted: #a0a7b3;
+    --line: #262a33;
+    --surface: #171a20;
+    --accent: #5aa6ff;
+    --accent-soft: #16263b;
+    color-scheme: dark;
+  }
+}
+
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 17px/1.6 system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+}
+
+a { color: var(--accent); text-decoration: none; }
+a:hover { text-decoration: underline; text-underline-offset: 3px; }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+.page {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 72px 20px 48px;
+}
+
+/* Intro */
+.eyebrow {
+  margin: 0 0 8px;
+  color: var(--muted);
+  font-size: 15px;
+  letter-spacing: 0.02em;
+}
+h1 {
+  margin: 0 0 16px;
+  font-size: clamp(34px, 6vw, 46px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+}
+.lead {
+  margin: 0 0 24px;
+  font-size: 19px;
+  color: var(--muted);
+  max-width: 60ch;
+}
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.links a {
+  padding: 8px 16px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 500;
+}
+.links a:hover { border-color: var(--accent); color: var(--accent); text-decoration: none; }
+
+/* Sections */
+section { margin-top: 72px; }
+h2 {
+  margin: 0 0 20px;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--muted);
+  font-weight: 600;
+}
+h3 { margin: 0; font-size: 22px; letter-spacing: -0.01em; }
+
+/* Projects */
+.project {
+  padding: 28px 0;
+  border-top: 1px solid var(--line);
+}
+.project:first-of-type { border-top: 0; padding-top: 0; }
+.project p { margin: 0 0 14px; }
+.meta {
+  color: var(--muted);
+  font-size: 15px;
+  margin: 4px 0 14px !important;
+}
+.status {
+  display: inline-block;
+  padding: 1px 8px;
+  border-radius: 999px;
+  background: var(--accent-soft);
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 600;
+}
+.project-head {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+.project-head .meta { margin: 2px 0 0 !important; }
+.app-icon { border-radius: 13px; flex: none; }
+
+.shots {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  margin: 8px 0 18px;
+}
+.shots img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.points {
+  margin: 0 0 16px;
+  padding-left: 20px;
+}
+.points li { margin: 4px 0; }
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  list-style: none;
+  margin: 0 0 16px;
+  padding: 0;
+}
+.tags li {
+  padding: 3px 10px;
+  border-radius: 999px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  font-size: 13px;
+  color: var(--muted);
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+/* Skills */
+.skills { margin: 0; display: grid; gap: 14px; }
+.skills div {
+  display: grid;
+  grid-template-columns: 160px 1fr;
+  gap: 16px;
+}
+.skills dt { font-weight: 600; }
+.skills dd { margin: 0; color: var(--muted); }
+
+/* Contact & footer */
+.contact p { margin: 0; }
+.footer {
+  margin-top: 72px;
+  padding-top: 20px;
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-size: 14px;
+}
+.footer p { margin: 0; }
+
+/* Small screens */
+@media (max-width: 600px) {
+  body { font-size: 16px; }
+  .page { padding: 48px 16px 40px; }
+  .lead { font-size: 17px; }
+  section { margin-top: 56px; }
+  .shots { grid-template-columns: repeat(2, 1fr); }
+  .skills div { grid-template-columns: 1fr; gap: 2px; }
+}
